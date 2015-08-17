@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class KCLHeadLine;
 
 @interface KCLHeadLineCell : UICollectionViewCell
+
+// 模型属性
+@property (nonatomic, strong) KCLHeadLine *headLine;
 
 @end
