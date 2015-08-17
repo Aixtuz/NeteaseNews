@@ -16,6 +16,7 @@
 		A7B3D3C31B5F244300766CDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B3D3C21B5F244300766CDF /* AppDelegate.m */; };
 		A7B3D3CB1B5F244300766CDF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7B3D3CA1B5F244300766CDF /* Images.xcassets */; };
 		A7B3D3CE1B5F244300766CDF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B3D3CC1B5F244300766CDF /* LaunchScreen.xib */; };
+		A7F495A61B81CB930096540D /* KCLHeadLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F495A51B81CB930096540D /* KCLHeadLineCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		A7B3D3CA1B5F244300766CDF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A7B3D3CD1B5F244300766CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A7B3D3D31B5F244300766CDF /* NeteaseNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeteaseNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7F495A41B81CB930096540D /* KCLHeadLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCLHeadLineCell.h; sourceTree = "<group>"; };
+		A7F495A51B81CB930096540D /* KCLHeadLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCLHeadLineCell.m; sourceTree = "<group>"; };
 		D07BA4A0707133920B3C9F46 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,10 +93,12 @@
 		A739EF021B8168AF004972C1 /* BannerLoop */ = {
 			isa = PBXGroup;
 			children = (
-				A739EF051B816982004972C1 /* BannerLoopController.h */,
-				A739EF061B816982004972C1 /* BannerLoopController.m */,
 				A739EF0B1B816A86004972C1 /* KCLHeadLine.h */,
 				A739EF0C1B816A86004972C1 /* KCLHeadLine.m */,
+				A7F495A41B81CB930096540D /* KCLHeadLineCell.h */,
+				A7F495A51B81CB930096540D /* KCLHeadLineCell.m */,
+				A739EF051B816982004972C1 /* BannerLoopController.h */,
+				A739EF061B816982004972C1 /* BannerLoopController.m */,
 			);
 			name = BannerLoop;
 			sourceTree = "<group>";
@@ -296,6 +301,7 @@
 				A739EF071B816982004972C1 /* BannerLoopController.m in Sources */,
 				A739EF111B8173A8004972C1 /* KCLNetworkTools.m in Sources */,
 				A7B3D3C31B5F244300766CDF /* AppDelegate.m in Sources */,
+				A7F495A61B81CB930096540D /* KCLHeadLineCell.m in Sources */,
 				A7B3D3C01B5F244300766CDF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
