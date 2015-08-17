@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		89E9303E243D5E6660DF367A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 893B75997233D8C3D9D0370B /* libPods.a */; };
+		A739EF041B8168E9004972C1 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A739EF031B8168E9004972C1 /* News.storyboard */; };
+		A739EF071B816982004972C1 /* BannerLoopController.m in Sources */ = {isa = PBXBuildFile; fileRef = A739EF061B816982004972C1 /* BannerLoopController.m */; };
+		A739EF0D1B816A86004972C1 /* KCLHeadLine.m in Sources */ = {isa = PBXBuildFile; fileRef = A739EF0C1B816A86004972C1 /* KCLHeadLine.m */; };
+		A739EF111B8173A8004972C1 /* KCLNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = A739EF101B8173A8004972C1 /* KCLNetworkTools.m */; };
 		A7B3D3C01B5F244300766CDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B3D3BF1B5F244300766CDF /* main.m */; };
 		A7B3D3C31B5F244300766CDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B3D3C21B5F244300766CDF /* AppDelegate.m */; };
-		A7B3D3C61B5F244300766CDF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B3D3C51B5F244300766CDF /* ViewController.m */; };
-		A7B3D3C91B5F244300766CDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7B3D3C71B5F244300766CDF /* Main.storyboard */; };
 		A7B3D3CB1B5F244300766CDF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7B3D3CA1B5F244300766CDF /* Images.xcassets */; };
 		A7B3D3CE1B5F244300766CDF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7B3D3CC1B5F244300766CDF /* LaunchScreen.xib */; };
-		A7B3D3DA1B5F244300766CDF /* NeteaseNewsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B3D3D91B5F244300766CDF /* NeteaseNewsTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,19 +31,21 @@
 /* Begin PBXFileReference section */
 		5CFB4CEA9FAE57AC77191864 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		893B75997233D8C3D9D0370B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A739EF031B8168E9004972C1 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
+		A739EF051B816982004972C1 /* BannerLoopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerLoopController.h; sourceTree = "<group>"; };
+		A739EF061B816982004972C1 /* BannerLoopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerLoopController.m; sourceTree = "<group>"; };
+		A739EF0B1B816A86004972C1 /* KCLHeadLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCLHeadLine.h; sourceTree = "<group>"; };
+		A739EF0C1B816A86004972C1 /* KCLHeadLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCLHeadLine.m; sourceTree = "<group>"; };
+		A739EF0F1B8173A8004972C1 /* KCLNetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCLNetworkTools.h; sourceTree = "<group>"; };
+		A739EF101B8173A8004972C1 /* KCLNetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCLNetworkTools.m; sourceTree = "<group>"; };
 		A7B3D3BA1B5F244300766CDF /* NeteaseNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeteaseNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B3D3BE1B5F244300766CDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7B3D3BF1B5F244300766CDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A7B3D3C11B5F244300766CDF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A7B3D3C21B5F244300766CDF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A7B3D3C41B5F244300766CDF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A7B3D3C51B5F244300766CDF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A7B3D3C81B5F244300766CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A7B3D3CA1B5F244300766CDF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A7B3D3CD1B5F244300766CDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A7B3D3D31B5F244300766CDF /* NeteaseNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeteaseNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A7B3D3D81B5F244300766CDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A7B3D3D91B5F244300766CDF /* NeteaseNewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeteaseNewsTests.m; sourceTree = "<group>"; };
 		D07BA4A0707133920B3C9F46 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,11 +77,40 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A739EF011B81688F004972C1 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				A739EF0E1B81735C004972C1 /* Tools */,
+				A739EF021B8168AF004972C1 /* BannerLoop */,
+				A739EF031B8168E9004972C1 /* News.storyboard */,
+			);
+			name = classes;
+			sourceTree = "<group>";
+		};
+		A739EF021B8168AF004972C1 /* BannerLoop */ = {
+			isa = PBXGroup;
+			children = (
+				A739EF051B816982004972C1 /* BannerLoopController.h */,
+				A739EF061B816982004972C1 /* BannerLoopController.m */,
+				A739EF0B1B816A86004972C1 /* KCLHeadLine.h */,
+				A739EF0C1B816A86004972C1 /* KCLHeadLine.m */,
+			);
+			name = BannerLoop;
+			sourceTree = "<group>";
+		};
+		A739EF0E1B81735C004972C1 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				A739EF0F1B8173A8004972C1 /* KCLNetworkTools.h */,
+				A739EF101B8173A8004972C1 /* KCLNetworkTools.m */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
 		A7B3D3B11B5F244300766CDF = {
 			isa = PBXGroup;
 			children = (
 				A7B3D3BC1B5F244300766CDF /* NeteaseNews */,
-				A7B3D3D61B5F244300766CDF /* NeteaseNewsTests */,
 				A7B3D3BB1B5F244300766CDF /* Products */,
 				9F248D604502309BFD1EDECD /* Pods */,
 				F91B7ECE193974043E076585 /* Frameworks */,
@@ -97,11 +129,9 @@
 		A7B3D3BC1B5F244300766CDF /* NeteaseNews */ = {
 			isa = PBXGroup;
 			children = (
+				A739EF011B81688F004972C1 /* classes */,
 				A7B3D3C11B5F244300766CDF /* AppDelegate.h */,
 				A7B3D3C21B5F244300766CDF /* AppDelegate.m */,
-				A7B3D3C41B5F244300766CDF /* ViewController.h */,
-				A7B3D3C51B5F244300766CDF /* ViewController.m */,
-				A7B3D3C71B5F244300766CDF /* Main.storyboard */,
 				A7B3D3CA1B5F244300766CDF /* Images.xcassets */,
 				A7B3D3CC1B5F244300766CDF /* LaunchScreen.xib */,
 				A7B3D3BD1B5F244300766CDF /* Supporting Files */,
@@ -114,23 +144,6 @@
 			children = (
 				A7B3D3BE1B5F244300766CDF /* Info.plist */,
 				A7B3D3BF1B5F244300766CDF /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		A7B3D3D61B5F244300766CDF /* NeteaseNewsTests */ = {
-			isa = PBXGroup;
-			children = (
-				A7B3D3D91B5F244300766CDF /* NeteaseNewsTests.m */,
-				A7B3D3D71B5F244300766CDF /* Supporting Files */,
-			);
-			path = NeteaseNewsTests;
-			sourceTree = "<group>";
-		};
-		A7B3D3D71B5F244300766CDF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A7B3D3D81B5F244300766CDF /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -189,7 +202,8 @@
 		A7B3D3B21B5F244300766CDF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				CLASSPREFIX = KCL;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Aixtuz;
 				TargetAttributes = {
 					A7B3D3B91B5F244300766CDF = {
@@ -225,8 +239,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7B3D3C91B5F244300766CDF /* Main.storyboard in Resources */,
 				A7B3D3CE1B5F244300766CDF /* LaunchScreen.xib in Resources */,
+				A739EF041B8168E9004972C1 /* News.storyboard in Resources */,
 				A7B3D3CB1B5F244300766CDF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,7 +292,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7B3D3C61B5F244300766CDF /* ViewController.m in Sources */,
+				A739EF0D1B816A86004972C1 /* KCLHeadLine.m in Sources */,
+				A739EF071B816982004972C1 /* BannerLoopController.m in Sources */,
+				A739EF111B8173A8004972C1 /* KCLNetworkTools.m in Sources */,
 				A7B3D3C31B5F244300766CDF /* AppDelegate.m in Sources */,
 				A7B3D3C01B5F244300766CDF /* main.m in Sources */,
 			);
@@ -288,7 +304,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7B3D3DA1B5F244300766CDF /* NeteaseNewsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,14 +318,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A7B3D3C71B5F244300766CDF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A7B3D3C81B5F244300766CDF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A7B3D3CC1B5F244300766CDF /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -343,6 +350,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -409,6 +417,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NeteaseNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Aixtuz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -420,6 +429,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = NeteaseNews/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Aixtuz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -438,6 +448,7 @@
 				);
 				INFOPLIST_FILE = NeteaseNewsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Aixtuz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeteaseNews.app/NeteaseNews";
 			};
@@ -453,6 +464,7 @@
 				);
 				INFOPLIST_FILE = NeteaseNewsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Aixtuz.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeteaseNews.app/NeteaseNews";
 			};
