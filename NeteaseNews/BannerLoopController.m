@@ -24,10 +24,27 @@ static NSString * const reuseIdentifier = @"headline";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 测试: headLines: 方法的回调数据
+    // 回调 GET 取得的数据
     [KCLHeadLine headLines:^(NSArray *array) {
+        
+        // 测试: headLines: 方法的回调数据
         NSLog(@"%@", array);
+        
+        // 属性存储数据(Setter)
+        self.headLines = array;
+        //!!! 异步请求, 获取数据, 此前已执行数据源方法(无数据)
     }];
+}
+
+// 重写 setter 方法
+- (void)setHeadLines:(NSArray *)headLines {
+    
+    // 先赋予属性, 保持 getter 取值一致
+    _headLines = headLines;
+    
+    // 异步请求, 获取数据, 属性存储后, 刷新数据
+    [self.collectionView reloadData];
+    
 }
 
 #pragma mark - <UICollectionViewDataSource>
