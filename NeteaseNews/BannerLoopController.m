@@ -7,6 +7,7 @@
 //
 
 #import "BannerLoopController.h"
+#import "KCLHeadLine.h"
 
 @interface BannerLoopController ()
 
@@ -19,13 +20,15 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
+    // 测试: headLines: 方法的回调数据
+    [KCLHeadLine headLines:^(NSArray *array) {
+        NSLog(@"%@", array);
+    }];
+    
     
     // Register cell classes
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
+
 }
 
 - (void)didReceiveMemoryWarning {
