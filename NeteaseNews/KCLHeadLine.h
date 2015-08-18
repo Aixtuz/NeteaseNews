@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+// HeadLine 的数据模型
 @interface KCLHeadLine : NSObject
 
 // 标题

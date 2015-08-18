@@ -1,16 +1,16 @@
 //
-//  BannerLoopController.m
+//  KCLImageLoopController.m
 //  NeteaseNews
 //
-//  Created by Aixtuz Kang on 15/8/17.
+//  Created by Aixtuz Kang on 15/8/18.
 //  Copyright © 2015年 Aixtuz. All rights reserved.
 //
 
-#import "BannerLoopController.h"
+#import "KCLImageLoopController.h"
 #import "KCLHeadLine.h"
 #import "KCLHeadLineCell.h"
 
-@interface BannerLoopController ()
+@interface KCLImageLoopController ()
 
 // 模型数组
 @property (nonatomic, strong) NSArray *headLines;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation BannerLoopController
+@implementation KCLImageLoopController
 
 static NSString * const reuseIdentifier = @"headline";
 
@@ -32,7 +32,7 @@ static NSString * const reuseIdentifier = @"headline";
     [KCLHeadLine headLines:^(NSArray *array) {
         
         // 测试: headLines: 方法的回调数据
-        NSLog(@"\nBannerLoop数据:\n%@", array);
+        NSLog(@"\nImageLoop数据:\n%@", array);
         
         // 属性存储数据(Setter)
         self.headLines = array;
@@ -54,6 +54,13 @@ static NSString * const reuseIdentifier = @"headline";
     self.collectionView.showsHorizontalScrollIndicator = NO;
 }
 
+// 设置布局
+- (void)viewDidLayoutSubviews {
+    
+    // 自动布局完成后, 设置 Cell 尺寸
+    self.flowLayout.itemSize = self.collectionView.bounds.size;
+}
+
 // 重写 setter 方法
 - (void)setHeadLines:(NSArray *)headLines {
     
@@ -72,7 +79,7 @@ static NSString * const reuseIdentifier = @"headline";
 
 // 返回 Cell 数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-
+    
     return self.headLines.count;
 }
 
@@ -85,17 +92,17 @@ static NSString * const reuseIdentifier = @"headline";
      0. 初始 item = 1
      
      1. currentItem = 1, nextItem = 2, imgIndex = 0:
-        currentData : item(1) - 1 + imgIndex(0) => (0 + count(4)) % count(4) = 0
-        nextData    : item(2) - 1 + imgIndex(0) => (1 + count(4)) % count(4) = 1
+     currentData : item(1) - 1 + imgIndex(0) => (0 + count(4)) % count(4) = 0
+     nextData    : item(2) - 1 + imgIndex(0) => (1 + count(4)) % count(4) = 1
      
      2. currentItem = 2, nextItem = 3, imgIndex = 1:
-        currentData : item(2) - 1 + imgIndex(1) => (2 + count(4)) % count(4) = 2
-        nextData    : item(3) - 1 + imgIndex(1) => (3 + count(4)) % count(4) = 3
+     currentData : item(2) - 1 + imgIndex(1) => (2 + count(4)) % count(4) = 2
+     nextData    : item(3) - 1 + imgIndex(1) => (3 + count(4)) % count(4) = 3
      
      // 循环, 无限滚动
      3. currentItem = 3, nextItem = 0, imgIndex = 2:
-        currentData : item(3) - 1 + imgIndex(2) => (4 + count(4)) % count(4) = 0
-        nextData    : item(0) - 1 + imgIndex(2) => (1 + count(4)) % count(4) = 1
+     currentData : item(3) - 1 + imgIndex(2) => (4 + count(4)) % count(4) = 0
+     nextData    : item(0) - 1 + imgIndex(2) => (1 + count(4)) % count(4) = 1
      */
     // Cell: N 显示 Data: N - 1
     NSInteger index = (indexPath.item - 1 + self.imgIndex + self.headLines.count) % self.headLines.count;
@@ -130,6 +137,5 @@ static NSString * const reuseIdentifier = @"headline";
 }
 
 
-#pragma mark - <UICollectionViewDelegate>
 
 @end
