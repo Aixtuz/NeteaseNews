@@ -19,6 +19,7 @@
 		A7FB860C1B831767003835C0 /* KCLNews.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FB860B1B831767003835C0 /* KCLNews.m */; };
 		A7FB860F1B831827003835C0 /* KCLImageLoopController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FB860E1B831827003835C0 /* KCLImageLoopController.m */; };
 		A7FB86121B831F46003835C0 /* KCLTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FB86111B831F46003835C0 /* KCLTableViewController.m */; };
+		A7FB86151B832F82003835C0 /* KCLNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FB86141B832F82003835C0 /* KCLNewsCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		A7FB860E1B831827003835C0 /* KCLImageLoopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCLImageLoopController.m; sourceTree = "<group>"; };
 		A7FB86101B831F46003835C0 /* KCLTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCLTableViewController.h; sourceTree = "<group>"; };
 		A7FB86111B831F46003835C0 /* KCLTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCLTableViewController.m; sourceTree = "<group>"; };
+		A7FB86131B832F82003835C0 /* KCLNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCLNewsCell.h; sourceTree = "<group>"; };
+		A7FB86141B832F82003835C0 /* KCLNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCLNewsCell.m; sourceTree = "<group>"; };
 		D07BA4A0707133920B3C9F46 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,6 +168,8 @@
 			children = (
 				A7FB860A1B831767003835C0 /* KCLNews.h */,
 				A7FB860B1B831767003835C0 /* KCLNews.m */,
+				A7FB86131B832F82003835C0 /* KCLNewsCell.h */,
+				A7FB86141B832F82003835C0 /* KCLNewsCell.m */,
 				A7FB86101B831F46003835C0 /* KCLTableViewController.h */,
 				A7FB86111B831F46003835C0 /* KCLTableViewController.m */,
 			);
@@ -323,6 +328,7 @@
 				A7FB86121B831F46003835C0 /* KCLTableViewController.m in Sources */,
 				A7FB860C1B831767003835C0 /* KCLNews.m in Sources */,
 				A7FB860F1B831827003835C0 /* KCLImageLoopController.m in Sources */,
+				A7FB86151B832F82003835C0 /* KCLNewsCell.m in Sources */,
 				A7B3D3C01B5F244300766CDF /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
