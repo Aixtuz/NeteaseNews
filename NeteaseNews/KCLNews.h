@@ -21,7 +21,7 @@
 @property (nonatomic, copy) NSNumber *replyCount;
 
 // 附加图片数组(数据): 用于 newsExtra
-@property (nonatomic, copy) NSArray *imgExtra;
+@property (nonatomic, copy) NSArray *imgextra;
 
 // 大图标识(数据): 用于 newsBig
 @property (nonatomic, copy) NSNumber *imgType;

@@ -34,7 +34,7 @@
 + (CGFloat)rowHeight:(KCLNews *)news {
     
     // 根据 Cell 类型, 返回高度
-    if (news.imgExtra) {
+    if (news.imgextra) {
         
         return 135;
         
@@ -49,9 +49,9 @@
 + (NSString *)reuseID:(KCLNews *)news {
     
     // 判别自定义 Cell
-    if (news.imgExtra) {
+    if (news.imgextra) {
         
-        // 存在 imgExtra 返回 newsExtra
+        // 存在 imgextra 返回 newsExtra
         return @"newsExtra";
         
     } else if (news.imgType) {
@@ -76,14 +76,14 @@
     self.digestView.text = news.digest;
     self.replyCountView.text = [NSString stringWithFormat:@"%d人跟帖", news.replyCount.intValue];
     
-    // 判断 newsExtra, 设置 imgExtra
-    if (news.imgExtra) {
+    // 判断 newsExtra, 设置 imgextra
+    if (news.imgextra) {
         
         // 遍历 数据 & 控件
-        for (int i = 0; i < news.imgExtra.count; i++) {
+        for (int i = 0; i < news.imgextra.count; i++) {
             
             // 数据(字典): [@"imgsrc": @"url"]
-            NSDictionary *dict = news.imgExtra[i];
+            NSDictionary *dict = news.imgextra[i];
             
             // 图片地址
             NSString *imgStr = dict[@"imgsrc"];
