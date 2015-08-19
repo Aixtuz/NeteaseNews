@@ -110,6 +110,7 @@ static NSString * const reuseIdentifier = @"headline";
     // 保存 Cell 序号
     // cell.tag = indexPath.item;
     cell.tag = index;
+    
     // 传递 Cell 模型数据
     // cell.headLine = self.headLines[indexPath.item];
     cell.headLine = self.headLines[index];

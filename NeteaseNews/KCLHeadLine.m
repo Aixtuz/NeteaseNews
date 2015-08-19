@@ -25,6 +25,7 @@
     for (NSString *name in [self getProperties]) {
         [headLine setValue:dict[name] forKey:name];
     }
+    
     return headLine;
 }
 
@@ -39,8 +40,8 @@
     // GET 请求
     [[KCLNetworkTools shareNetworkTools] GET:@"ad/headline/0-4.html" parameters:nil success:^(NSURLSessionDataTask *task, NSDictionary *dict) {
         /*
-         object         {1}
-         headline_ad     [4]
+         object      {1}
+         headline_ad   [4]
          0               {title, tag, subtitle, imgsrc, url}
          1               {5}
          2               {5}
@@ -54,6 +55,7 @@
         
         // 字典转模型
         NSMutableArray *mArray = [NSMutableArray array];
+        
         // 遍历, (封装字典转模型)初始化, 数组存储
         for (NSDictionary *dict in array) {
             
@@ -62,14 +64,16 @@
             // 模型存入数组
             [mArray addObject:headLine];
         }
-        // 执行回调函数
+        
+        // 执行回调函数, 在 Controller 中测试回调数据
         if (completion) {
             completion(mArray.copy);
         }
-        // 回调后在 Controller 中测试数据
-
+        
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         
+        // 错误信息
+        NSLog(@"%@", error);
     }];
 }
 
@@ -82,8 +86,10 @@
     
     // 存储 OC 字符串数组
     NSMutableArray *mArray = [NSMutableArray array];
+    
     // 遍历转数组元素
     for (int i = 0; i < count; i++) {
+        
         objc_property_t property = properties[i];
         
         // 取出属性名, 返回C语言字符串(const char *)

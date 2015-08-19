@@ -16,6 +16,7 @@
 // 图片地址
 @property (nonatomic, copy) NSString *imgsrc;
 
+
 // 封装字典转模型 的 初始化方法
 + (instancetype)headLineWithDict:(NSDictionary *)dict;
 

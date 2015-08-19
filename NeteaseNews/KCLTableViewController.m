@@ -45,7 +45,6 @@
     [self.tableView reloadData];
 }
 
-
 #pragma mark - Table view data source
 
 // 返回 row 数
@@ -58,15 +57,20 @@
     
     // 取出模型
     KCLNews *news = self.newsList[indexPath.row];
+    
     // 创建
     KCLNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:[KCLNewsCell reuseID:news]];
+    
     // 设置
     cell.news = self.newsList[indexPath.row];
+    
     // 返回
     return cell;
 }
 
-// SB 设置行高无效, 代理方法设置行高
+#pragma mark - Table view delegate
+
+// SB 设置行高无效, 代理方法返回行高
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     // 取出模型

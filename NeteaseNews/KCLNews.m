@@ -55,7 +55,7 @@
             [mArray addObject:news];
         }
         
-        // 回调函数
+        // 回调函数, 在 Controller 中测试回调数据
         if (completion) {
             completion(mArray.copy);
         }
@@ -63,7 +63,6 @@
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"%@", error);
     }];
-    
 }
 
 @end

@@ -20,8 +20,12 @@
 // 回复
 @property (nonatomic, copy) NSNumber *replyCount;
 
-// 附加图片数组(数据): 用于 newsextra
-@property (nonatomic, copy) NSArray *imgextra;
+// 附加图片数组(数据): 用于 newsExtra
+@property (nonatomic, copy) NSArray *imgExtra;
+
+// 大图标识(数据): 用于 newsBig
+@property (nonatomic, copy) NSNumber *imgType;
+
 
 // 封装字典转模型的构造方法
 + (instancetype)newsWithDict:(NSDictionary *)dict;

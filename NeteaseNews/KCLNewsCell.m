@@ -22,9 +22,8 @@
 // 回复
 @property (weak, nonatomic) IBOutlet UILabel *replyCountView;
 
-// 附加图片数组(控件): 用于 newsextra
+// 附加图片数组(控件): 用于 newsExtra
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *iconViews;
-
 
 @end
 
@@ -34,20 +33,31 @@
 // 返回 Cell 的高度
 + (CGFloat)rowHeight:(KCLNews *)news {
     
-    // 存在 imgextra 返回 newsextra
-    if (news.imgextra) {
+    // 根据 Cell 类型, 返回高度
+    if (news.imgExtra) {
+        
         return 135;
+        
+    } else if (news.imgType) {
+        
+        return 180;
     }
-    // 无则返回 news
     return 90;
 }
 
 // 返回 Cell 的重用标识: 缓冲池出列前判断 Cell, 此时未实例化对象, 需要类方法
 + (NSString *)reuseID:(KCLNews *)news {
     
-    // 存在 imgextra 返回 newsextra
-    if (news.imgextra) {
-        return @"newsextra";
+    // 判别自定义 Cell
+    if (news.imgExtra) {
+        
+        // 存在 imgExtra 返回 newsExtra
+        return @"newsExtra";
+        
+    } else if (news.imgType) {
+        
+        // 存在 imgType 返回 newsBig
+        return @"newsBig";
     }
     // 无则返回 news
     return @"news";
@@ -66,14 +76,14 @@
     self.digestView.text = news.digest;
     self.replyCountView.text = [NSString stringWithFormat:@"%d人跟帖", news.replyCount.intValue];
     
-    // 判断 newsextra, 设置 imgextra
-    if (news.imgextra) {
+    // 判断 newsExtra, 设置 imgExtra
+    if (news.imgExtra) {
         
         // 遍历 数据 & 控件
-        for (int i = 0; i < news.imgextra.count; i++) {
+        for (int i = 0; i < news.imgExtra.count; i++) {
             
             // 数据(字典): [@"imgsrc": @"url"]
-            NSDictionary *dict = news.imgextra[i];
+            NSDictionary *dict = news.imgExtra[i];
             
             // 图片地址
             NSString *imgStr = dict[@"imgsrc"];

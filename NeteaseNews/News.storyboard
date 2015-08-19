@@ -72,8 +72,50 @@
                                     <outlet property="titleView" destination="D6D-PQ-dzm" id="2MU-93-YWc"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsextra" rowHeight="135" id="7S7-5X-SCq" customClass="KCLNewsCell">
-                                <rect key="frame" x="0.0" y="418" width="600" height="135"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsBig" rowHeight="180" id="kwz-Rt-fvj" customClass="KCLNewsCell">
+                                <rect key="frame" x="0.0" y="418" width="600" height="180"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kwz-Rt-fvj" id="dlJ-5p-b1C">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="179"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jgv-zD-dCI">
+                                            <rect key="frame" x="8" y="37" width="584" height="110"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxb-Se-g7i">
+                                            <rect key="frame" x="8" y="155" width="584" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtu-uL-coe">
+                                            <rect key="frame" x="8" y="8" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Jgv-zD-dCI" secondAttribute="trailing" id="5Sf-lq-Naa"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="wxb-Se-g7i" secondAttribute="bottom" id="E2G-qv-kNj"/>
+                                        <constraint firstItem="wxb-Se-g7i" firstAttribute="leading" secondItem="Jgv-zD-dCI" secondAttribute="leading" id="GoI-2D-wn1"/>
+                                        <constraint firstItem="wxb-Se-g7i" firstAttribute="trailing" secondItem="Jgv-zD-dCI" secondAttribute="trailing" id="Myf-Nl-BDv"/>
+                                        <constraint firstItem="wxb-Se-g7i" firstAttribute="top" secondItem="Jgv-zD-dCI" secondAttribute="bottom" constant="8" id="QL3-e4-vfZ"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="wxb-Se-g7i" secondAttribute="leading" id="QzD-KU-EA8"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="gtu-uL-coe" secondAttribute="leading" id="WbA-jk-1t9"/>
+                                        <constraint firstAttribute="topMargin" secondItem="gtu-uL-coe" secondAttribute="top" id="eHi-Rb-RgP"/>
+                                        <constraint firstItem="Jgv-zD-dCI" firstAttribute="top" secondItem="gtu-uL-coe" secondAttribute="bottom" constant="8" id="g8R-Ek-VCi"/>
+                                        <constraint firstItem="Jgv-zD-dCI" firstAttribute="leading" secondItem="gtu-uL-coe" secondAttribute="leading" id="hcJ-9k-sQf"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="digestView" destination="wxb-Se-g7i" id="CfB-1d-yKv"/>
+                                    <outlet property="iconView" destination="Jgv-zD-dCI" id="C9I-74-1DQ"/>
+                                    <outlet property="titleView" destination="gtu-uL-coe" id="hN7-sb-B0b"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="newsExtra" rowHeight="135" id="7S7-5X-SCq" customClass="KCLNewsCell">
+                                <rect key="frame" x="0.0" y="598" width="600" height="135"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7S7-5X-SCq" id="SY7-ta-76Y">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="134"/>

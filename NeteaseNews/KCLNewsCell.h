@@ -15,6 +15,7 @@
 // 数据模型
 @property (nonatomic, strong) KCLNews *news;
 
+
 // 返回 Cell 的重用标识: 缓冲池出列前判断 Cell, 此时未实例化对象, 需要类方法
 + (NSString *)reuseID:(KCLNews *)news;
 
