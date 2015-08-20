@@ -20,7 +20,7 @@
 // 封装字典转模型 的 初始化方法
 + (instancetype)headLineWithDict:(NSDictionary *)dict;
 
-// 异步请求, 获取数据, 转为模型数组
+// 异步请求, 回调数据(调用转模型方法)
 + (void)headLines:(void (^)(NSArray *))completion;
 
 @end

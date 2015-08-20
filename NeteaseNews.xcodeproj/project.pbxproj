@@ -11,6 +11,12 @@
 		A739EF041B8168E9004972C1 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A739EF031B8168E9004972C1 /* News.storyboard */; };
 		A739EF0D1B816A86004972C1 /* KCLHeadLine.m in Sources */ = {isa = PBXBuildFile; fileRef = A739EF0C1B816A86004972C1 /* KCLHeadLine.m */; };
 		A739EF111B8173A8004972C1 /* KCLNetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = A739EF101B8173A8004972C1 /* KCLNetworkTools.m */; };
+		A7874C611B845F65007F5F23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7874C601B845F65007F5F23 /* Main.storyboard */; };
+		A7874C661B846234007F5F23 /* KCLHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7874C651B846234007F5F23 /* KCLHomeController.m */; };
+		A7874C681B84642A007F5F23 /* channel_list.json in Resources */ = {isa = PBXBuildFile; fileRef = A7874C671B84642A007F5F23 /* channel_list.json */; };
+		A7874C6B1B8464C9007F5F23 /* KCLChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7874C6A1B8464C9007F5F23 /* KCLChannel.m */; };
+		A7874C6E1B846D58007F5F23 /* KCLLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7874C6D1B846D58007F5F23 /* KCLLabel.m */; };
+		A7874C711B8473C0007F5F23 /* KCLHomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7874C701B8473C0007F5F23 /* KCLHomeCell.m */; };
 		A7B3D3C01B5F244300766CDF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B3D3BF1B5F244300766CDF /* main.m */; };
 		A7B3D3C31B5F244300766CDF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B3D3C21B5F244300766CDF /* AppDelegate.m */; };
 		A7B3D3CB1B5F244300766CDF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7B3D3CA1B5F244300766CDF /* Images.xcassets */; };
@@ -40,6 +46,16 @@
 		A739EF0C1B816A86004972C1 /* KCLHeadLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCLHeadLine.m; sourceTree = "<group>"; };
 		A739EF0F1B8173A8004972C1 /* KCLNetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCLNetworkTools.h; sourceTree = "<group>"; };
 		A739EF101B8173A8004972C1 /* KCLNetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCLNetworkTools.m; sourceTree = "<group>"; };
+		A7874C601B845F65007F5F23 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A7874C641B846234007F5F23 /* KCLHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCLHomeController.h; sourceTree = "<group>"; };
+		A7874C651B846234007F5F23 /* KCLHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCLHomeController.m; sourceTree = "<group>"; };
+		A7874C671B84642A007F5F23 /* channel_list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = channel_list.json; sourceTree = "<group>"; };
+		A7874C691B8464C9007F5F23 /* KCLChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCLChannel.h; sourceTree = "<group>"; };
+		A7874C6A1B8464C9007F5F23 /* KCLChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCLChannel.m; sourceTree = "<group>"; };
+		A7874C6C1B846D58007F5F23 /* KCLLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCLLabel.h; sourceTree = "<group>"; };
+		A7874C6D1B846D58007F5F23 /* KCLLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCLLabel.m; sourceTree = "<group>"; };
+		A7874C6F1B8473C0007F5F23 /* KCLHomeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KCLHomeCell.h; sourceTree = "<group>"; };
+		A7874C701B8473C0007F5F23 /* KCLHomeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KCLHomeCell.m; sourceTree = "<group>"; };
 		A7B3D3BA1B5F244300766CDF /* NeteaseNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeteaseNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7B3D3BE1B5F244300766CDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7B3D3BF1B5F244300766CDF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,9 +108,11 @@
 		A739EF011B81688F004972C1 /* classes */ = {
 			isa = PBXGroup;
 			children = (
-				A739EF0E1B81735C004972C1 /* Tools */,
+				A7874C631B8460D6007F5F23 /* Home */,
 				A739EF021B8168AF004972C1 /* BannerLoop */,
 				A7FB86091B831207003835C0 /* News */,
+				A739EF0E1B81735C004972C1 /* Tools */,
+				A7874C621B845F7D007F5F23 /* Others */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -115,10 +133,34 @@
 		A739EF0E1B81735C004972C1 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				A7874C6C1B846D58007F5F23 /* KCLLabel.h */,
+				A7874C6D1B846D58007F5F23 /* KCLLabel.m */,
 				A739EF0F1B8173A8004972C1 /* KCLNetworkTools.h */,
 				A739EF101B8173A8004972C1 /* KCLNetworkTools.m */,
 			);
 			name = Tools;
+			sourceTree = "<group>";
+		};
+		A7874C621B845F7D007F5F23 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				A7B3D3C11B5F244300766CDF /* AppDelegate.h */,
+				A7B3D3C21B5F244300766CDF /* AppDelegate.m */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		A7874C631B8460D6007F5F23 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A7874C691B8464C9007F5F23 /* KCLChannel.h */,
+				A7874C6A1B8464C9007F5F23 /* KCLChannel.m */,
+				A7874C6F1B8473C0007F5F23 /* KCLHomeCell.h */,
+				A7874C701B8473C0007F5F23 /* KCLHomeCell.m */,
+				A7874C641B846234007F5F23 /* KCLHomeController.h */,
+				A7874C651B846234007F5F23 /* KCLHomeController.m */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 		A7B3D3B11B5F244300766CDF = {
@@ -144,11 +186,10 @@
 			isa = PBXGroup;
 			children = (
 				A739EF011B81688F004972C1 /* classes */,
+				A7874C601B845F65007F5F23 /* Main.storyboard */,
 				A739EF031B8168E9004972C1 /* News.storyboard */,
-				A7B3D3C11B5F244300766CDF /* AppDelegate.h */,
-				A7B3D3C21B5F244300766CDF /* AppDelegate.m */,
-				A7B3D3CA1B5F244300766CDF /* Images.xcassets */,
 				A7B3D3CC1B5F244300766CDF /* LaunchScreen.xib */,
+				A7B3D3CA1B5F244300766CDF /* Images.xcassets */,
 				A7B3D3BD1B5F244300766CDF /* Supporting Files */,
 			);
 			path = NeteaseNews;
@@ -157,8 +198,9 @@
 		A7B3D3BD1B5F244300766CDF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A7B3D3BE1B5F244300766CDF /* Info.plist */,
 				A7B3D3BF1B5F244300766CDF /* main.m */,
+				A7B3D3BE1B5F244300766CDF /* Info.plist */,
+				A7874C671B84642A007F5F23 /* channel_list.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -271,6 +313,8 @@
 				A7B3D3CE1B5F244300766CDF /* LaunchScreen.xib in Resources */,
 				A739EF041B8168E9004972C1 /* News.storyboard in Resources */,
 				A7B3D3CB1B5F244300766CDF /* Images.xcassets in Resources */,
+				A7874C681B84642A007F5F23 /* channel_list.json in Resources */,
+				A7874C611B845F65007F5F23 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,12 +368,16 @@
 				A739EF0D1B816A86004972C1 /* KCLHeadLine.m in Sources */,
 				A739EF111B8173A8004972C1 /* KCLNetworkTools.m in Sources */,
 				A7B3D3C31B5F244300766CDF /* AppDelegate.m in Sources */,
+				A7874C6E1B846D58007F5F23 /* KCLLabel.m in Sources */,
 				A7F495A61B81CB930096540D /* KCLHeadLineCell.m in Sources */,
+				A7874C6B1B8464C9007F5F23 /* KCLChannel.m in Sources */,
 				A7FB86121B831F46003835C0 /* KCLTableViewController.m in Sources */,
+				A7874C711B8473C0007F5F23 /* KCLHomeCell.m in Sources */,
 				A7FB860C1B831767003835C0 /* KCLNews.m in Sources */,
 				A7FB860F1B831827003835C0 /* KCLImageLoopController.m in Sources */,
 				A7FB86151B832F82003835C0 /* KCLNewsCell.m in Sources */,
 				A7B3D3C01B5F244300766CDF /* main.m in Sources */,
+				A7874C661B846234007F5F23 /* KCLHomeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

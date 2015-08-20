@@ -23,7 +23,7 @@
     return news;
 }
 
-// no property for a given key 时, 被 setValue:forKey: 调用
+// no property for a given key 时, setValue:forKey: 调用:
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key {
     
 }

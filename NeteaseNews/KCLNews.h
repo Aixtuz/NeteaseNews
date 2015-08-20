@@ -30,7 +30,7 @@
 // 封装字典转模型的构造方法
 + (instancetype)newsWithDict:(NSDictionary *)dict;
 
-// 异步请求, 返回数据, 转为模型数组
+// 异步请求, 回调数据(调用转模型方法)
 + (void)newsList:(void (^)(NSArray *))completion;
 
 @end
