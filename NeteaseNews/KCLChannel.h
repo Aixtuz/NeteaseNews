@@ -14,6 +14,8 @@
 @property (nonatomic, copy) NSString *tname;
 // 频道 ID
 @property (nonatomic, copy) NSString *tid;
+// tid 拼接 GET 请求地址
+@property (nonatomic, copy, readonly) NSString *urlStr;
 
 
 // 封装字典转模型的初始化方法

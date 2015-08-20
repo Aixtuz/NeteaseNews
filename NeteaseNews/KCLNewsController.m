@@ -6,26 +6,35 @@
 //  Copyright © 2015年 Aixtuz. All rights reserved.
 //
 
-#import "KCLTableViewController.h"
+#import "KCLNewsController.h"
 #import "KCLNews.h"
 #import "KCLNewsCell.h"
 
-@interface KCLTableViewController ()
+@interface KCLNewsController ()
 
 // TableViewCell 的 数据模型数组
 @property (nonatomic, strong) NSArray *newsList;
 
 @end
 
-@implementation KCLTableViewController
+@implementation KCLNewsController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     // 测试断言
     // [KCLNews newsList:nil];
+    
+}
+
+// 重写 Setter 方法
+- (void)setUrlStr:(NSString *)urlStr {
+    
+    // 传递数据, 不做他用, 不必赋予属性保存
+    // _urlStr = urlStr;
+    
     // 回调 GET 取得的数据
-    [KCLNews newsList:^(NSArray *array) {
+    [KCLNews newsListWithUrl:urlStr completion:^(NSArray *array) {
         
         // 测试: newsList: 方法的回调数据
         NSLog(@"\nNewsList数据:\n%@", array);
@@ -36,6 +45,7 @@
     }];
 }
 
+// 传入 urlStr 设置 newsList 方法
 - (void)setNewsList:(NSArray *)newsList {
     
     // 先赋予属性, 保持 getter 取值一致

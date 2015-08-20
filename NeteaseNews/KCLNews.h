@@ -31,6 +31,6 @@
 + (instancetype)newsWithDict:(NSDictionary *)dict;
 
 // 异步请求, 回调数据(调用转模型方法)
-+ (void)newsList:(void (^)(NSArray *))completion;
++ (void)newsListWithUrl:(NSString *)urlStr completion:(void (^)(NSArray *))completion;
 
 @end

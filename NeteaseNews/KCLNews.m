@@ -29,7 +29,7 @@
 }
 
 // 异步请求, 返回数据, 转为模型数组
-+ (void)newsList:(void (^)(NSArray *))completion {
++ (void)newsListWithUrl:(NSString *)urlStr completion:(void (^)(NSArray *))completion {
     
     // 断言: 判断条件, 不成立则抛出异常
     NSAssert(completion != nil, @"异常描述: newsList 回调 conpletion 不能为空!");
@@ -38,7 +38,7 @@
     [KCLNetworkTools shareNetworkTools].responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
     
     // 单例 + GET 请求
-    [[KCLNetworkTools shareNetworkTools] GET:@"article/headline/T1348647853363/0-140.html" parameters:nil success:^(NSURLSessionDataTask *task, NSDictionary *dict) {
+    [[KCLNetworkTools shareNetworkTools] GET:urlStr parameters:nil success:^(NSURLSessionDataTask *task, NSDictionary *dict) {
         
         // 获取数组 headline_ad, key枚举器获取首元素
         NSString *firstKey = dict.keyEnumerator.nextObject;

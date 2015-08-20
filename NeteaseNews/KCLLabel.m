@@ -18,11 +18,12 @@
     
     // 实例化
     KCLLabel *label = [self new];
-    
     // 标题
     label.text = tname;
     // 对齐
     label.textAlignment = NSTextAlignmentCenter;
+    // 颜色
+    label.textColor = [UIColor lightGrayColor];
     // 大字体
     label.font = [UIFont systemFontOfSize:kBIGFONT];
     // 大字体自适应尺寸

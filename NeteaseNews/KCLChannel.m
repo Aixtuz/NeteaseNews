@@ -22,6 +22,13 @@
     return channel;
 }
 
+// 重写 urlStr 的 getter 方法
+- (NSString *)urlStr {
+    
+    // 拼接 JSON 数据的 GET 请求地址
+    return [NSString stringWithFormat:@"article/headline/%@/0-140.html", self.tid];
+}
+
 // no property for a given key 时, setValue:forKey: 调用:
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key {
     

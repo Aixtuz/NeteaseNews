@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--News Controller-->
         <scene sceneID="d5S-1N-hzm">
             <objects>
-                <tableViewController id="MMF-b9-5Qv" customClass="KCLTableViewController" sceneMemberID="viewController">
+                <tableViewController id="MMF-b9-5Qv" customClass="KCLNewsController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="YVF-4o-bfj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,6 +106,7 @@
                                         <constraint firstAttribute="topMargin" secondItem="gtu-uL-coe" secondAttribute="top" id="eHi-Rb-RgP"/>
                                         <constraint firstItem="Jgv-zD-dCI" firstAttribute="top" secondItem="gtu-uL-coe" secondAttribute="bottom" constant="8" id="g8R-Ek-VCi"/>
                                         <constraint firstItem="Jgv-zD-dCI" firstAttribute="leading" secondItem="gtu-uL-coe" secondAttribute="leading" id="hcJ-9k-sQf"/>
+                                        <constraint firstAttribute="bottom" secondItem="Jgv-zD-dCI" secondAttribute="bottom" constant="32" id="qqk-Ae-xhg"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -217,7 +218,7 @@
                                             <color key="currentPageIndicatorTintColor" red="1" green="0.49898475850000001" blue="0.21562403620000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </pageControl>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XjO-J2-vxE">
-                                            <rect key="frame" x="0.0" y="20" width="318" height="193"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="318" height="213"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -225,11 +226,12 @@
                                 <constraints>
                                     <constraint firstItem="cYo-tQ-ghw" firstAttribute="bottom" secondItem="Lxd-Qm-3mH" secondAttribute="bottomMargin" id="2FH-xN-xvn"/>
                                     <constraint firstItem="H7x-mn-NUd" firstAttribute="centerY" secondItem="cYo-tQ-ghw" secondAttribute="centerY" id="5HG-Rx-HiB"/>
-                                    <constraint firstItem="cYo-tQ-ghw" firstAttribute="top" secondItem="XjO-J2-vxE" secondAttribute="bottom" constant="8" id="8va-Mw-AWW"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="XjO-J2-vxE" secondAttribute="trailing" constant="-8" id="9tD-Uv-BV3"/>
                                     <constraint firstItem="H7x-mn-NUd" firstAttribute="trailing" secondItem="XjO-J2-vxE" secondAttribute="trailing" constant="-8" id="9uU-7a-Tui"/>
                                     <constraint firstItem="cYo-tQ-ghw" firstAttribute="leading" secondItem="XjO-J2-vxE" secondAttribute="leading" constant="8" id="IL3-i4-wP2"/>
-                                    <constraint firstItem="XjO-J2-vxE" firstAttribute="top" secondItem="Lxd-Qm-3mH" secondAttribute="topMargin" constant="12" id="lge-K1-lJJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="XjO-J2-vxE" secondAttribute="bottom" constant="33" id="WAZ-AT-7mQ"/>
+                                    <constraint firstItem="cYo-tQ-ghw" firstAttribute="top" secondItem="XjO-J2-vxE" secondAttribute="bottom" constant="8" id="XzW-bU-NYu"/>
+                                    <constraint firstItem="XjO-J2-vxE" firstAttribute="top" secondItem="Lxd-Qm-3mH" secondAttribute="topMargin" constant="-8" id="lge-K1-lJJ"/>
                                     <constraint firstItem="XjO-J2-vxE" firstAttribute="leading" secondItem="Lxd-Qm-3mH" secondAttribute="leadingMargin" constant="-8" id="yHc-AB-Qt5"/>
                                 </constraints>
                                 <connections>

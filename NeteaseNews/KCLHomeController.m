@@ -9,6 +9,7 @@
 #import "KCLHomeController.h"
 #import "KCLChannel.h"
 #import "KCLLabel.h"
+#import "KCLHomeCell.h"
 
 @interface KCLHomeController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
@@ -31,8 +32,13 @@
     
     // 加载频道列表
     [self loadChannels];
+}
+
+// 布局子控件
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
     
-    // 设置布局
+    // 尺寸: 子控件加载完毕, 设置尺寸才生效: HomeCell = item = collectionView
     self.flowLayout.itemSize = self.collectionView.bounds.size;
     // 横间距
     self.flowLayout.minimumInteritemSpacing = 0;
@@ -44,7 +50,6 @@
     self.collectionView.pagingEnabled = YES;
     // 滚动条
     self.collectionView.showsHorizontalScrollIndicator = NO;
-    
 }
 
 // 重写数据模型数组的 getter 方法
@@ -89,6 +94,27 @@
     self.scrollView.showsHorizontalScrollIndicator = NO;
 }
 
+#pragma mark - UICollectionView DataSource
+
+// 返回 Cell 数
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    
+    return self.channels.count;
+}
+
+// 返回自定义 Cell
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    // 创建
+    KCLHomeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"home" forIndexPath:indexPath];
+    
+    // 当前 channel
+    KCLChannel *channel = self.channels[indexPath.item];
+    // 传递拼接的 JSON 请求地址
+    cell.urlStr = channel.urlStr;
+    
+    return cell;
+}
 
 @end
 

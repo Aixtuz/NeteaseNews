@@ -10,4 +10,7 @@
 
 @interface KCLHomeCell : UICollectionViewCell
 
+// 传递 tid 拼接的 GET 请求地址
+@property (nonatomic, copy) NSString *urlStr;
+
 @end
