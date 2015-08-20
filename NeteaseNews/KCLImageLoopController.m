@@ -38,9 +38,12 @@ static NSString * const reuseIdentifier = @"headline";
         self.headLines = array;
         //!!! 异步请求, 获取数据, 此前已执行数据源方法(无数据)
     }];
+}
+
+// 布局子控件
+- (void)viewDidLayoutSubviews {
     
-    // 设置 Cell 样式
-    // 尺寸
+    // 尺寸: 子控件加载完毕, 设置尺寸才生效: item = collectionView
     self.flowLayout.itemSize = self.collectionView.bounds.size;
     // 横间距
     self.flowLayout.minimumInteritemSpacing = 0;
@@ -52,13 +55,6 @@ static NSString * const reuseIdentifier = @"headline";
     self.collectionView.pagingEnabled = YES;
     // 滚动条
     self.collectionView.showsHorizontalScrollIndicator = NO;
-}
-
-// 设置布局
-- (void)viewDidLayoutSubviews {
-    
-    // 自动布局完成后, 设置 Cell 尺寸
-    self.flowLayout.itemSize = self.collectionView.bounds.size;
 }
 
 // 重写 setter 方法
