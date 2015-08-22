@@ -6,8 +6,8 @@
 //  Copyright © 2015年 Aixtuz. All rights reserved.
 //
 
-#define kBIGFONT 18
-#define kSMALLFONT 14
+#define kBIGFONT 18.0
+#define kSMALLFONT 14.0
 
 #import "KCLLabel.h"
 
@@ -23,7 +23,7 @@
     // 对齐
     label.textAlignment = NSTextAlignmentCenter;
     // 颜色
-    label.textColor = [UIColor lightGrayColor];
+    label.textColor = [UIColor darkGrayColor];
     // 大字体
     label.font = [UIFont systemFontOfSize:kBIGFONT];
     // 大字体自适应尺寸
@@ -32,6 +32,15 @@
     label.font = [UIFont systemFontOfSize:kSMALLFONT];
     
     return label;
+}
+
+// 重写 Scale 的 Setter 方法
+- (void)setScale:(CGFloat)scale {
+    
+    // 只计算增大部分比例, 确保最小比例为 1
+    CGFloat maxScale = kBIGFONT / kSMALLFONT - 1;
+    self.transform = CGAffineTransformMakeScale(maxScale * scale + 1, maxScale * scale + 1);
+    self.textColor = [UIColor colorWithRed:scale green:0 blue:0 alpha:1];
 }
 
 @end

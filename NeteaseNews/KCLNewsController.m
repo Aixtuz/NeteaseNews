@@ -24,7 +24,6 @@
     
     // 测试断言
     // [KCLNews newsList:nil];
-    
 }
 
 // 重写 Setter 方法
@@ -33,7 +32,10 @@
     // 传递数据, 不做他用, 不必赋予属性保存
     // _urlStr = urlStr;
     
-    // 回调 GET 取得的数据
+    // 异步请求数据前, 先清空(set: nil), setter 方法中刷新数据
+    self.newsList = nil;
+    
+    // 异步请求, 回调 GET 取得的数据
     [KCLNews newsListWithUrl:urlStr completion:^(NSArray *array) {
         
         // 测试: newsList: 方法的回调数据

@@ -23,6 +23,9 @@
 // 数据模型数组
 @property (nonatomic, strong) NSArray *channels;
 
+// 当前高亮频道索引
+@property (nonatomic, assign) NSInteger currentIndex;
+
 @end
 
 @implementation KCLHomeController
@@ -92,6 +95,10 @@
     self.scrollView.contentSize = CGSizeMake(x, 0);
     // 滚动条
     self.scrollView.showsHorizontalScrollIndicator = NO;
+    
+    // 默认首频道红色放大
+    KCLLabel *label = self.scrollView.subviews[0];
+    label.scale = 1;
 }
 
 #pragma mark - UICollectionView DataSource
@@ -103,7 +110,7 @@
 }
 
 // 返回自定义 Cell
--(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     // 创建
     KCLHomeCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"home" forIndexPath:indexPath];
@@ -114,6 +121,68 @@
     cell.urlStr = channel.urlStr;
     
     return cell;
+}
+
+#pragma mark - UICollectionView Delegate
+
+// 正在滚动
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    // Label: Current && Next
+    KCLLabel *currentLabel = self.scrollView.subviews[self.currentIndex];
+    KCLLabel *nextLabel;
+    
+    // Display Cell: Current && Next
+    NSArray *indexArray = [self.collectionView indexPathsForVisibleItems];
+    for (NSIndexPath *indexPath in indexArray) {
+        
+        // 与当前索引不同的, 为 Next
+        if (indexPath.item != self.currentIndex) {
+            nextLabel = self.scrollView.subviews[indexPath.item];
+            break;
+        }
+    }
+    // 未找到, 默认空
+    if (nextLabel == nil) {
+        return;
+    }
+    
+    // 文字放大动画
+    // 变化参数: scale: 0..1, next = scale, current = 1 - scale
+    CGFloat nextScale = ABS(scrollView.contentOffset.x / scrollView.bounds.size.width - self.currentIndex);
+    CGFloat currentScale = 1 - nextScale;
+    
+    // 设置颜色
+    currentLabel.scale = currentScale;
+    nextLabel.scale = nextScale;
+    
+    // 起始偏移点
+    CGFloat startOffset = self.scrollView.bounds.size.width * 0.5;
+    // 最大偏移点
+    CGFloat maxOffset = self.scrollView.contentSize.width - self.scrollView.bounds.size.width - currentLabel.bounds.size.width;
+    // 偏移量
+    CGFloat offset = currentLabel.center.x - startOffset;
+    
+    if (offset < 0) {
+        
+        // 未到起始点, 最小值
+        offset = 0;
+        
+    } else if (offset > maxOffset) {
+        
+        // 超过最大点, 最大值
+        offset = maxOffset + currentLabel.bounds.size.width;
+    }
+    
+    // 设置 scrollView 偏移, 使 Label 居中
+    [self.scrollView setContentOffset:CGPointMake(offset, 0)];
+}
+
+// 滚动停止
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+        
+    // 当前索引
+    self.currentIndex = scrollView.contentOffset.x / scrollView.bounds.size.width;
 }
 
 @end
