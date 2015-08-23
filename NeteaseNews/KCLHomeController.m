@@ -176,13 +176,16 @@
     
     // 设置 scrollView 偏移, 使 Label 居中
     [self.scrollView setContentOffset:CGPointMake(offset, 0)];
-}
-
-// 滚动停止
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    
+    // 一次划动末尾, 立刻切换新 currentIndex
+    for (NSIndexPath *indexPath in indexArray) {
         
-    // 当前索引
-    self.currentIndex = scrollView.contentOffset.x / scrollView.bounds.size.width;
+        // 与当前索引不同的, 为 Next
+        if (indexPath.item != self.currentIndex) {
+            
+            self.currentIndex = indexPath.item;
+        }
+    }
 }
 
 @end
